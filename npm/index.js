@@ -30,7 +30,7 @@ class countryflagsWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/countryflags';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"country":{"type":"string","required":true,"minLength":2,"maxLength":2},"format":{"type":"string","required":true},"shape":{"type":"string","required":true}};
+        this.validationRules = {"country":{"type":"string","required":true,"minLength":2,"maxLength":2},"format":{"type":"string","required":false},"shape":{"type":"string","required":false}};
     }
 
     /**
