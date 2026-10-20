@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -25,8 +25,8 @@ class CountryflagsAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "country": {"type": "string", "required": True, "minLength": 2, "maxLength": 2},
-        "format": {"type": "string", "required": True},
-        "shape": {"type": "string", "required": True}
+        "format": {"type": "string", "required": False},
+        "shape": {"type": "string", "required": False}
     }
 
     # Format validation patterns
