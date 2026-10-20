@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: Country Flags
   description: >-
-    Country Flag is a simple tool for getting the country's national flags. It
-    returns the country's national flags.
+    Country Flags is a country flag API that fetches direct download URLs for
+    national flag images using two-letter ISO country codes. Responses return
+    the country name, ISO code, and image link, while paid plans can select SVG
+    or PNG formats and shapes.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/countryflags:
     get:
-      summary: Get Country Flag
+      summary: Country Flags
       description: >-
         Country Flag is a simple tool for getting the country's national flags.
         It returns the country's national flags.
@@ -35,15 +37,18 @@ paths:
           in: query
           schema:
             type: string
-          required: true
-          description: The format of the flag image
+          required: false
+          description: The format of the flag image. Optional; defaults to png.
           example: png
         - name: shape
           in: query
           schema:
             type: string
-          required: true
-          description: The shape of the flag image
+          required: false
+          description: >-
+            The shape of the flag image: rectangle (official proportions),
+            square (1:1 icon) or circle (round 1:1 icon). Optional; defaults to
+            rectangle.
           example: circle
       responses:
         '200':
@@ -70,8 +75,7 @@ paths:
                   countryCode: ZW
                   shape: circle
                   format: png
-                  downloadUrl: >-
-                    https://storage.googleapis.com/apiverve/APIResources/countryflags/circle/png/zw.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766096512&Signature=EfbtYmSr82YpFvV%2FYWRrlA66wKW4j2%2F2n6EDLGnpwhxd9pXvzBQm4xhNVnwRy3tHCvDTWNQTQUaP9kndqcqm5NBlsfzgJlHpBLPLNt3xRBgXwAm5vmPMfoQY%2B%2BHwmYkxBH1H%2BnIkoWeXEsDLoh1MdwUfvTKKP9PDlCyc2FQUJyZoqXxdshHE9l%2Fv019N9z3AipL7jpmeJQnMTDtos8aCa2I9dm%2FzgpMvi2fdMiRfMCNsjlbyug0h0w6wO1W3FLc3K477psnT4BcXARBmn3dYq4hSSLdmhPnKMpCrYXFnhdxZq0VHXNHid1FwLYuMcp%2FPHIJ1%2Fj2OvqMUPEpip%2Fq%2FpA%3D%3D
+                  downloadUrl: https://storage.googleapis.com/apiverve/APIResources/countryflags/circle/png/zw.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766096512&Signature=EfbtYmSr82YpFvV%2FYWRrlA66wKW4j2%2F2n6EDLGnpwhxd9pXvzBQm4xhNVnwRy3tHCvDTWNQTQUaP9kndqcqm5NBlsfzgJlHpBLPLNt3xRBgXwAm5vmPMfoQY%2B%2BHwmYkxBH1H%2BnIkoWeXEsDLoh1MdwUfvTKKP9PDlCyc2FQUJyZoqXxdshHE9l%2Fv019N9z3AipL7jpmeJQnMTDtos8aCa2I9dm%2FzgpMvi2fdMiRfMCNsjlbyug0h0w6wO1W3FLc3K477psnT4BcXARBmn3dYq4hSSLdmhPnKMpCrYXFnhdxZq0VHXNHid1FwLYuMcp%2FPHIJ1%2Fj2OvqMUPEpip%2Fq%2FpA%3D%3D
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
