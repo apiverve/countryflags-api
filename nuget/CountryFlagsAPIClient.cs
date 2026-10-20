@@ -68,8 +68,8 @@ namespace APIVerve.API.CountryFlags
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "country", new ValidationRule { Type = "string", Required = true, MinLength = 2, MaxLength = 2 } },
-            { "format", new ValidationRule { Type = "string", Required = true } },
-            { "shape", new ValidationRule { Type = "string", Required = true } }
+            { "format", new ValidationRule { Type = "string", Required = false } },
+            { "shape", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
