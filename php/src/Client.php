@@ -19,7 +19,7 @@ use APIVerve\Countryflags\Exceptions\ValidationException;
  * print_r($response);
  * ```
  *
- * @see https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -35,8 +35,8 @@ class Client
      */
     private const VALIDATION_RULES = [
         'country' => ['type' => 'string', 'required' => true, 'minLength' => 2, 'maxLength' => 2],
-        'format' => ['type' => 'string', 'required' => true],
-        'shape' => ['type' => 'string', 'required' => true]
+        'format' => ['type' => 'string', 'required' => false],
+        'shape' => ['type' => 'string', 'required' => false]
     ];
 
     /**

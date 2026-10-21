@@ -1,6 +1,6 @@
 # Country Flags API - PHP Package
 
-Country Flag is a simple tool for getting the country's national flags. It returns the country's national flags.
+Country Flags is a country flag API that fetches direct download URLs for national flag images using two-letter ISO country codes. Responses return the country name, ISO code, and image link, while paid plans can select SVG or PNG formats and shapes.
 
 ## Installation
 
@@ -89,11 +89,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countryflags?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countryflags?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/countryflags?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
