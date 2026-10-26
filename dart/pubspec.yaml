@@ -1,7 +1,7 @@
 name: apiverve_countryflags
-description: Country Flag is a simple tool for getting the country's national flags. It returns the country's national flags.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/countryflags?utm_source=dart&utm_medium=homepage
+description: "Country Flags is a country flag API that fetches direct download URLs for national flag images using two-letter ISO country codes. Responses return the country name, ISO code, and image link, while paid plans can select SVG or PNG formats and shapes."
+version: 1.2.3
+homepage: https://apiverve.com/marketplace/countryflags?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/countryflags-api/tree/main/dart
 
 environment:

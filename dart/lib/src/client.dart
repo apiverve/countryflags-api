@@ -46,12 +46,12 @@ final _formatPatterns = {
 
 /// Country Flags API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/countryflags?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/countryflags?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [country] (required) - The 2 letter ISO Country Code (e.g. ZW) [minLength: 2, maxLength: 2]
-/// * [format] (required) - The format of the flag image
-/// * [shape] (required) - The shape of the flag image
+/// * [format] - The format of the flag image. Optional; defaults to png.
+/// * [shape] - The shape of the flag image: rectangle (official proportions), square (1:1 icon) or circle (round 1:1 icon). Optional; defaults to rectangle.
 class CountryflagsClient {
   final String apiKey;
   final String baseUrl;
@@ -60,8 +60,8 @@ class CountryflagsClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'country': ValidationRule(type: 'string', required: true, minLength: 2, maxLength: 2),
-    'format': ValidationRule(type: 'string', required: true),
-    'shape': ValidationRule(type: 'string', required: true),
+    'format': ValidationRule(type: 'string', required: false),
+    'shape': ValidationRule(type: 'string', required: false),
   };
 
   CountryflagsClient(this.apiKey, {
